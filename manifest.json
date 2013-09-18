@@ -1,0 +1,21 @@
+{
+  "name": "Bitcoin Wallet App",
+  "version": "1.0.1",
+  "description": "Bitcoin wallet",
+  "background": { "scripts": ["background.js"] },
+  "page_action" :
+  {
+    "default_icon" : "wallet.jpg",
+    "default_popup" : "popup.html"
+  },
+  "permissions" : [
+    "tabs"
+  ],
+  "content_scripts" : [{
+    "matches" : ["http://*/*","https://*/*","file://*/*"],
+    "js" : ["clicky.js"],
+    "css" : ["bootstrap.min.css"]
+  }],
+  "options_page": "options.html",
+  "manifest_version": 2
+}
